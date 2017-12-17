@@ -1,6 +1,10 @@
 @echo off
 
 
+:: set encoding to utf8
+chcp 65001
+
+
 :: set version
 set websitebackup_version=1.0.0
 :: set date
