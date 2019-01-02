@@ -1,7 +1,7 @@
 @echo off
 
 
-:: set encoding to utf8
+:: set the encoding to utf8
 chcp 65001
 
 
