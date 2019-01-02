@@ -51,6 +51,9 @@ set connection_details=-pw %ssh_password% -hostkey %ssh_hostkey% %ssh_user%@%ssh
 :: set plink connection
 set connection_plink=plink.exe -ssh %connection_details%
 
+:: get more details like the hostkey
+:: set connection_plink=plink.exe -v -ssh %connection_details%
+
 :: set pscp connection
 set connection_pscp=pscp.exe -sftp %connection_details%
 
