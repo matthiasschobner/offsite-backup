@@ -66,7 +66,7 @@ set connection_pscp=pscp.exe -sftp %connection_details%
 %connection_plink% mkdir -p %backups_path%/%backupname% && echo remote backup directory created
 
 :: create remote files backup
-%connection_plink% tar cfz %backups_path%/%backupname%/%backupname%_files.tar.gz %website_path% && echo remote files backup completed
+%connection_plink% tar cfpz %backups_path%/%backupname%/%backupname%_files.tar.gz %website_path% && echo remote files backup completed
 
 :: create remote database backup
 %connection_plink% mysqldump -u %db_user% -p'%db_password%' %db_name% --result-file=%backups_path%/%backupname%/%backupname%_database.sql && echo remote database backup completed
