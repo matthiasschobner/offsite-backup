@@ -82,6 +82,6 @@ ssh $connection_details << EOF
     rm $backups_path/$backupname/$backupname'_database.sql' && echo 'deleted remote database backup'
 
     # delete remote backup directory
-    rm -d $backups_path/$backupname && echo 'deleted remote backup directory'
+    rm -rf $backups_path/$backupname && echo 'deleted remote backup directory'
 
 EOF
