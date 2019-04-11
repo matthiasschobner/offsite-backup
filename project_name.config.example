@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+
+# SSH connection settings, please change them
+ssh_user=user
+ssh_host=localhost
+
+
+# database connection settings, please change them
+db_user=user
+db_name=db
+db_password=pass
+
+
+# path settings from server, please change them
+website_path=/www/absolute/path/to/website.tld/
+backups_path=/absolute/path/to/backups/website
