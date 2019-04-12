@@ -31,15 +31,6 @@ backupname=$datestr"_"$timestr
 # set connection details
 connection_details="$ssh_user@$ssh_host"
 
-# set plink connection
-connection_plink="plink -ssh $connection_details"
-
-# get more details like the hostkey
-# connection_plink="plink -v -ssh $connection_details"
-
-# set pscp connection
-connection_pscp="pscp -sftp $connection_details"
-
 
 ssh $connection_details << EOF
     set -xe
