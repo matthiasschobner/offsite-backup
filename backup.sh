@@ -1,9 +1,6 @@
 #!/bin/bash
 
 
-source project_codespicker.config
-
-
 # Pass config file to this script. Example: sh backup.sh my_website
 CONFIG_FILE=$( dirname "${BASH_SOURCE[0]}" )/$1".config"
 echo "Read config file ${CONFIG_FILE}"
