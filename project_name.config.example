@@ -8,10 +8,11 @@ ssh_host=localhost
 
 # database connection settings, please change them
 db_user=user
+db_host=localhost
 db_name=db
 db_password=pass
 
 
 # path settings from server, please change them
-website_path=/www/absolute/path/to/website.tld/
-backups_path=/absolute/path/to/backups/website
+website_path=path/to/website.tld/
+backups_path=path/to/backups/website.tld/
