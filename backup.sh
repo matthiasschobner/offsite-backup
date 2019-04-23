@@ -29,7 +29,6 @@ backupname="${datestr}_${timestr}"
 
 
 # set connection details
-ssh_connection="${ssh_user}@${ssh_host}"
 mysql_connection="-h ${db_host} -u ${db_user} -p'${db_password}' ${db_name}"
 
 
@@ -38,7 +37,7 @@ tar_file="${backups_path}${backupname}_files.tar.gz"
 sql_file="${backups_path}${backupname}_database.sql"
 
 
-ssh ${ssh_connection} << EOF
+ssh ${ssh_config} << EOF
     # create remote backup directory
     mkdir -p ${backups_path} && echo 'remote backup directory created'
 
@@ -58,13 +57,13 @@ mkdir "backups_${1}" && echo 'created local backup directory "backups_'$1'"'
 
 
 # download remote files backup
-scp ${ssh_connection}:${tar_file} "backups_${1}/${backupname}_files.tar.gz" && echo downloaded remote files backup
+scp ${ssh_config}:${tar_file} "backups_${1}/${backupname}_files.tar.gz" && echo downloaded remote files backup
 
 # download remote database backup
-scp ${ssh_connection}:${sql_file} "backups_${1}/${backupname}_database.sql" && echo downloaded remote database backup
+scp ${ssh_config}:${sql_file} "backups_${1}/${backupname}_database.sql" && echo downloaded remote database backup
 
 
-ssh ${ssh_connection} << EOF
+ssh ${ssh_config} << EOF
     rm ${tar_file} && echo 'deleted remote files backup'
 
     rm ${sql_file} && echo 'deleted remote database backup'

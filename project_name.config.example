@@ -2,9 +2,7 @@
 
 
 # SSH connection settings, please change them
-ssh_user=user
-ssh_host=localhost
-
+ssh_config=test1
 
 # database connection settings, please change them
 db_user=user

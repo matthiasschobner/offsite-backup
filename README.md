@@ -19,9 +19,11 @@ $ vim my_website.config
 To connect the server without password, config your local ssh key and add your public key to the server.
 
 More Infos:  
-https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent  
-https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2
+https://wiki.ubuntuusers.de/SSH/#Authentifizierung-ueber-Public-Keys  
 
+Setup .ssh/config  
+More Infos:  
+https://wiki.ubuntuusers.de/SSH/#ssh-config  
 
 ## run backup
 Run the script with the project name as parameter.  
