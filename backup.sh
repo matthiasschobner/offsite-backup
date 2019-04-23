@@ -8,9 +8,9 @@ source ${CONFIG_FILE}
 
 
 # set version
-websitebackup_version="1.1.0"
+websitebackup_version="1.1.15"
 # set date
-websitebackup_date="11.04.2019"
+websitebackup_date="23.04.2019"
 # set author
 websitebackup_author="Daniel Ruf (https://daniel-ruf.de) & Matthias Schobner (https://www.schobner.rocks)"
 
