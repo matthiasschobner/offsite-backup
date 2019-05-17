@@ -15,7 +15,7 @@ $ vim my_website.config
 ```
 
 
-### config – ssh connection
+### config – ssh connection with key file
 To connect the server without password, config your local ssh key and add your public key to the server.
 
 More Infos:  
