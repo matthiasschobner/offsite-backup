@@ -1,14 +1,6 @@
 #!/bin/bash
 
 
-# Output program information
-version="1.2.0"
-date="17.05.2019"
-author_1="Daniel Ruf (https://daniel-ruf.de))"
-author_2="Matthias Schobner (https://www.schobner.rocks)"
-echo_styled "Website backup ${version} (${date}) by ${author_1} & ${author_2}"
-
-
 ##
 # Styled echo
 # @param $1 text
@@ -18,6 +10,14 @@ echo_styled()
     ResetColor='\x1B[0m'
 	echo ${Yellow}${1}${ResetColor}
 }
+
+
+# Output program information
+version='1.2.0'
+date='17.05.2019'
+author_1='Daniel Ruf (https://daniel-ruf.de))'
+author_2='Matthias Schobner (https://www.schobner.rocks)'
+echo_styled "Website backup ${version} (${date}) by ${author_1} & ${author_2}"
 
 
 # Pass config file to this script. Example: sh backup.sh my_website
@@ -38,16 +38,16 @@ if [ -z "$ssh_config" ]; then
 else
     ssh_connection=${ssh_config}
 fi
-echo_styled "SSH connection configured."
+echo_styled 'SSH connection configured.'
 
 
 # Set mysql connection details
 mysql_connection="-h ${db_host} -u ${db_user} -p'${db_password}' ${db_name}"
-echo_styled "MySQL connection configured."
+echo_styled 'MySQL connection configured.'
 
 
 # Run backup
-echo_styled "Connect to server for run backup."
+echo_styled 'Connect to server for run backup.'
 ssh ${ssh_connection} << EOF
     mkdir -p ${backups_path}
     echo 'Remote backup directory created.'
@@ -69,16 +69,16 @@ echo_styled "Created local backup directory: '${local_path}'"
 
 
 # Download remote files
-echo_styled "Connect to server to download the files backup."
+echo_styled 'Connect to server to download the files backup.'
 scp ${ssh_connection}:${backups_path}${tar_filename} "${local_path}/${tar_filename}"
 echo_styled 'Downloaded remote files backup.'
-echo_styled "Connect to server to download the database backup."
+echo_styled 'Connect to server to download the database backup.'
 scp ${ssh_connection}:${backups_path}${sql_filename} "${local_path}/${sql_filename}"
 echo_styled 'Downloaded remote database backup.'
 
 
 # Remove old files
-echo_styled "Connect to server to cleanup backup folder."
+echo_styled 'Connect to server to cleanup backup folder.'
 ssh ${ssh_connection} << EOF
     rm ${backups_path}${tar_filename}
     echo 'Remote files backup deleted.'
