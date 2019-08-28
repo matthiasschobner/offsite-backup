@@ -2,11 +2,10 @@
 
 
 # Output program information
-version="1.2.0"
-date="17.05.2019"
+version="1.2"
 author_1="Daniel Ruf (https://daniel-ruf.de))"
 author_2="Matthias Schobner (https://www.schobner.rocks)"
-echo_styled "Website backup ${version} (${date}) by ${author_1} & ${author_2}"
+echo_styled "Website backup ${version} by ${author_1} & ${author_2}"
 
 
 ##
