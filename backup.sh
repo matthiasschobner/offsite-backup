@@ -13,7 +13,7 @@ echo_styled()
 
 
 # Output program information
-version="1.2.1"
+version="1.2.3"
 author_1="Daniel Ruf (https://daniel-ruf.de))"
 author_2="Matthias Schobner (https://www.schobner.rocks)"
 echo_styled "Website backup ${version} by ${author_1} & ${author_2}"
