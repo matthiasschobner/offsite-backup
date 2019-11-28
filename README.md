@@ -29,6 +29,6 @@ https://wiki.ubuntuusers.de/SSH/#ssh-config
 Run the script with the project name as parameter.  
 Watch closely for the project name! E.g.:
 ```bash
-$ sh backup.sh my_website
+$ sh backup.sh my_website.config
 ```
 for my_website.config

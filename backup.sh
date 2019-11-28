@@ -20,7 +20,7 @@ echo_styled "Website backup ${version} by ${author_1} & ${author_2}"
 
 
 # Pass config file to this script. Example: sh backup.sh my_website
-CONFIG_FILE=$( dirname "${BASH_SOURCE[0]}" )/$1".config"
+CONFIG_FILE=$( dirname "${BASH_SOURCE[0]}" )/$1
 echo_styled "Read config file: ${CONFIG_FILE}"
 source ${CONFIG_FILE}
 
