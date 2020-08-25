@@ -7,7 +7,7 @@ mkdir backups_server_gn-live
 rsync -av gn-live:backups/* backups_server_gn-live
 
 mkdir backups_server_bm-staging
-rsync -av gn-staging:backups/* backups_server_bm-staging
+rsync -av bm-staging:backups/* backups_server_bm-staging
 
 mkdir backups_server_bm-live
-rsync -av gn-live:backups/* backups_server_bm-live
+rsync -av bm-live:backups/* backups_server_bm-live
