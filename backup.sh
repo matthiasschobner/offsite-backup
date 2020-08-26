@@ -15,7 +15,7 @@ echo_styled()
 # Output program information
 version="1.2.3"
 author_1="Daniel Ruf (https://daniel-ruf.de))"
-author_2="Matthias Schobner (https://www.schobner.rocks)"
+author_2="Matthias Schobner (https://schobner.rocks)"
 echo_styled "Website backup ${version} by ${author_1} & ${author_2}"
 
 
@@ -59,7 +59,7 @@ ssh "${ssh_connection}" << EOF
     rm -rfv ${backups_path}/*
     echo 'Remote backup directory cleaned up.'
 
-    tar cfpz ${backups_path}/${tar_filename} ${website_path}
+    tar cfpz ${backups_path}/${tar_filename} ${website_path} ${website_path_exclude}
     echo 'Remote files backup completed.'
 
     mysqldump ${mysql_connection} --result-file=${backups_path}/${sql_filename}
