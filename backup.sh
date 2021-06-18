@@ -59,7 +59,7 @@ ssh "${ssh_connection}" << EOF
     rm -rfv ${backups_path}/*
     echo 'Remote backup directory cleaned up.'
 
-    tar cfpz ${backups_path}/${tar_filename} ${website_path} ${website_path_exclude}
+    tar cfpz ${backups_path}/${tar_filename} ${website_path} ${website_path_exclude} --checkpoint=1000
     echo 'Remote files backup completed.'
 
     mysqldump ${mysql_connection} --result-file=${backups_path}/${sql_filename}
