@@ -1,6 +1,5 @@
 # Created by .ignore support plugin (hsz.mobi)
 
-
 ### macOS template
 # General
 .DS_Store
@@ -34,7 +33,7 @@ Temporary Items
 .idea/*
 
 
-### Custom
-# Project connection config files
-*.config
+### Custom Project files
+/backups/*
 /backups_*/
+*.config

@@ -17,5 +17,5 @@ db_password=pass
 
 
 # Path settings from server, please change them
-website_path=server/path/to/website
-backups_path=server/path/to/backups/website
+server_website_path=server/path/to/website
+server_backups_path=server/path/to/backups/website
