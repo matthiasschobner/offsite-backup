@@ -73,8 +73,8 @@ ssh "${ssh_connection}" << EOF
     tar cfpz ${server_backups_path}/${tar_filename} ${server_website_path} ${server_website_path_exclude} --checkpoint=1000
     echo 'Remote files backup completed.'
 
-    if [ -n "${mysql_connection}" ]; then mysqldump ${mysql_connection} --result-file=${server_backups_path}/${sql_filename} fi
-    if [ -n "${mysql_connection}" ]; then echo 'Remote database backup completed.' fi
+    if [ -n "${mysql_connection}" ]; then mysqldump ${mysql_connection} --result-file=${server_backups_path}/${sql_filename}; fi
+    if [ -n "${mysql_connection}" ]; then echo 'Remote database backup completed.'; fi
 EOF
 echo_styled 'Remote backup is ready.'
 
@@ -103,8 +103,8 @@ ssh "${ssh_connection}" << EOF
     rm ${server_backups_path}/${tar_filename}
     echo 'Remote files backup deleted.'
 
-    if [ -n "${mysql_connection}" ]; then rm ${server_backups_path}/${sql_filename} fi
-    if [ -n "${mysql_connection}" ]; echo 'Remote database backup deleted.' fi
+    if [ -n "${mysql_connection}" ]; then rm ${server_backups_path}/${sql_filename}; fi
+    if [ -n "${mysql_connection}" ]; echo 'Remote database backup deleted.'; fi
 
     rm -rfv ${server_backups_path}/*
     echo 'Remote backup directory cleaned up.'
