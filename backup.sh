@@ -104,7 +104,7 @@ ssh "${ssh_connection}" << EOF
     echo 'Remote files backup deleted.'
 
     if [ -n "${mysql_connection}" ]; then rm ${server_backups_path}/${sql_filename}; fi
-    if [ -n "${mysql_connection}" ]; echo 'Remote database backup deleted.'; fi
+    if [ -n "${mysql_connection}" ]; then echo 'Remote database backup deleted.'; fi
 
     rm -rfv ${server_backups_path}/*
     echo 'Remote backup directory cleaned up.'
