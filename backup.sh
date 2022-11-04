@@ -63,7 +63,7 @@ fi
 echo_styled 'Connect to server for run backup.'
 # shellcheck disable=SC2087
 # shellcheck disable=SC2154
-ssh "${ssh_connection}" << EOF
+ssh -T "${ssh_connection}" << EOF
     mkdir -p ${server_backups_path}
     echo 'Remote backup directory created.'
 
