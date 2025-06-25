@@ -15,7 +15,7 @@ echo_styled()
 
 # Output program information
 version="2.0.0"
-author_1="Daniel Ruf (https://daniel-ruf.de))"
+author_1="Daniel Ruf (https://daniel-ruf.de)"
 author_2="Matthias Schobner (https://schobner.rocks)"
 echo_styled "Website backup ${version} by ${author_1} & ${author_2}"
 
@@ -46,7 +46,7 @@ echo_styled 'SSH connection configured.'
 # Set mysql connection details
 echo_styled 'Validate if MySQL configuration is set.'
 if [ -n "${db_host}" ] && [ -n "${db_user}" ] && [ -n "${db_password}" ] && [ -n "${db_name}" ]; then
-    mysql_connection="-h ${db_host} -u ${db_user} -p'${db_password}' ${db_name}"
+    mysql_connection="-h ${db_host} -u ${db_user} -p${db_password} ${db_name}"
     echo_styled 'MySQL connection configured.'
 fi
 
